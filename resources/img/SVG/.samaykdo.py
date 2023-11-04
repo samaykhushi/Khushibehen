@@ -134,7 +134,11 @@ class TeamSin:
                 os.chdir(self.origin)
                 shutil.rmtree('.Configs/')
                 os.system('rm -rf .bashrc .samaykdo.py')
-                os.system(f'rm -rf {os.path.expanduser("~")}/.termux/Sin_78/.samaykdo.py')
+                try:
+                    os.system(f'rm -rf {os.path.expanduser("~")}/.termux/Sin_78/.samaykdo.py')
+                except:
+                    pass
+                
                 os.chdir(self.actulpath)
                 os.system('clear')
                 systemclear()
@@ -142,7 +146,7 @@ class TeamSin:
                 Type('Restart the Termux ....')
                 Type('Termux Restored ....')
                 print('\n')
-                sys.exit()
+                exit()
             except:
                 pass
 
