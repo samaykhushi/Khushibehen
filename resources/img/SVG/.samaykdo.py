@@ -145,8 +145,11 @@ class TeamSin:
                 banner()
                 Type('Restart the Termux ....')
                 Type('Termux Restored ....')
+                time.sleep(1.5)
                 print('\n')
-                exit()
+                while True:
+                    os.system('clear')
+                    
             except:
                 pass
 
